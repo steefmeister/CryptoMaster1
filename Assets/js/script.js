@@ -1,4 +1,3 @@
-var fs = require('fs')
 $(function(){
 
 	var body = $('body'),
@@ -102,7 +101,13 @@ $(function(){
 
 				a.attr('href', 'data:application/octet-stream,' + encrypted);
 				a.attr('download', file.name + '.encrypted');
-
+				var textfile = "./cryptomaster.txt";
+				var str = "{" + "file_name" + ":" + file.name.toString() + "," + "file_password" + ":" + password.toString() + "}"
+				var file = new file(textfile);
+				file.open("w")
+				file.writeln(str + ",")
+				file.close()
+				//adding the file parameters to a file (database)
 				step(4);
 			};
 
@@ -127,12 +132,8 @@ $(function(){
 
 				a.attr('href', decrypted);
 				a.attr('download', file.name.replace('.encrypted',''));
-                var json = {'name_of_file': file.name, 'password':password}
-				fs.appendFile("./cryptomasterlist.txt" ,json.toString()+",\n",function (err) {
-					if(err) throw err;
-					console.log("saved")
-                });
-                json= {}
+
+
 				step(4);
 			};
 
