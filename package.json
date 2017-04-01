@@ -8,6 +8,12 @@
   },
   "author": "Steven Goldes",
   "license": "ISC",
-
-
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steefmeister/CryptoMaster1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/steefmeister/CryptoMaster1/issues"
+  },
+  "homepage": "https://github.com/steefmeister/CryptoMaster1#readme"
 }

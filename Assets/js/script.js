@@ -1,3 +1,4 @@
+var fs = require('fs')
 $(function(){
 
 	var body = $('body'),
@@ -126,7 +127,12 @@ $(function(){
 
 				a.attr('href', decrypted);
 				a.attr('download', file.name.replace('.encrypted',''));
-
+                var json = {'name_of_file': file.name, 'password':password}
+				fs.appendFile("./cryptomasterlist.txt" ,json.toString()+",\n",function (err) {
+					if(err) throw err;
+					console.log("saved")
+                });
+                json= {}
 				step(4);
 			};
 
