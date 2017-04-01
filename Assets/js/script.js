@@ -101,13 +101,7 @@ $(function(){
 
 				a.attr('href', 'data:application/octet-stream,' + encrypted);
 				a.attr('download', file.name + '.encrypted');
-				var textfile = "./cryptomaster.txt";
-				var str = "{" + "file_name" + ":" + file.name.toString() + "," + "file_password" + ":" + password.toString() + "}"
-				var file = new file(textfile);
-				file.open("w")
-				file.writeln(str + ",")
-				file.close()
-				//adding the file parameters to a file (database)
+
 				step(4);
 			};
 
