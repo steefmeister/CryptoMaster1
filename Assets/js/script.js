@@ -6,7 +6,7 @@ $(function(){
 
 	/* Step 1 */
     $('#step1 .database').click(function(){
-		window.open('SQL.html')
+        window.location.href="Assets/js/SQL.html"
     });
 
     $('#step1 .encrypt').click(function(){
