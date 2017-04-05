@@ -5,8 +5,11 @@ $(function(){
 		back = $('a.back');
 
 	/* Step 1 */
+    $('#step1 .database').click(function(){
 
-	$('#step1 .encrypt').click(function(){
+    });
+
+    $('#step1 .encrypt').click(function(){
 		body.attr('class', 'encrypt');
 
 		// Go to step 2
@@ -44,7 +47,7 @@ $(function(){
 		file = e.target.files[0];
 
 		if(file.size > 1024*1024){
-			alert('Please choose files smaller than 1mb, otherwise you may crash your browser. \nThis is a known issue. See the tutorial.');
+			alert('Please choose files smaller than 1mb');
 			return;
 		}
 
@@ -79,8 +82,7 @@ $(function(){
 			return;
 		}
 
-		// The HTML5 FileReader object will allow us to read the 
-		// contents of the	selected file.
+
 
 		var reader = new FileReader();
 
