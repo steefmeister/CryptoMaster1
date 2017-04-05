@@ -6,7 +6,7 @@ $(function(){
 
 	/* Step 1 */
     $('#step1 .database').click(function(){
-
+		window.open('C:\Users\User\Desktop\CryptoMaster1-master\CryptoMaster1\Assets\SQL.html')
     });
 
     $('#step1 .encrypt').click(function(){
